@@ -89,7 +89,7 @@ img {
 header{
     position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
     z-index: 999;
     padding: 1rem;
     width: 100%;
@@ -102,7 +102,6 @@ header > .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     /* padding: 1rem; */
 }
 
@@ -123,12 +122,14 @@ header > .container{
     background-color: var(--second-color);
 }
 .menu-btn svg{
-    fill: var(--first-color);
+    background: linear-gradient(90deg, rgba(56,88,214,1) 0%, rgba(37,69,195,1) 100%);    box-shadow: .25rem .24rem 1rem rgba(0, 0, 0, 0.25); 
+
 }
 .menu{
     position: fixed;
     left: 0;
-    bottom: var(--header-height);
+    top: var(--header-height);
+    /* bottom: ; */
     width: 100%;
     background-color: var(--second-color);
     display: flex;
@@ -140,7 +141,7 @@ header > .container{
 
 .menu a{
     color: var(--first-alpha-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1rem;
     font-weight: 600;
     text-align: center;
@@ -159,6 +160,7 @@ header > .container{
 
 @media screen and (min-width:1024px) {
     .container{
+        
         background-color: Transparent;
         
         /* filter: blur(8px);
@@ -211,21 +213,28 @@ header > .container{
 @media screen and (min-width:768px) {
 
 }
+/*Header desktop*/
+
+.header {
+    position: relative;   
+}
+
+
 
 @media screen and (min-width:1024px) {
     .header {
-        position: sticky;
+        position: fixed;
         top: 0;
         height: calc(var(--header-height)- .5rem);
         background-color: var(--white-alpha-color);
-        /*   -webkit-filter: blur(4px); */
-
-        
+        /*   -webkit-filter: blur(4px); */   
     }
 
 }
-@media screen and (min-width: 1024px) {
+/*
+*/
     .btn-svg-blue svg{
+        
         fill: var(--first-color);
         width: 15px;
         height: 15px;
@@ -253,7 +262,11 @@ header > .container{
         display: flex;
         font-size: 2rem;
         align-items: center;
-        padding-bottom: 1rem;
+        padding: 1rem;
+        
+    }
+    .form-title h3{
+        padding-left: 1rem;
     }
 
    
@@ -270,28 +283,49 @@ header > .container{
         flex-direction: row;
         align-items: baseline; 
         padding-right: 2rem;  
+        align-content: center;
     }
     
     .schedule-details{
         display: flex;
-        padding: 2rem;
+        flex-direction: column;
+        padding: 1rem;
         box-shadow: 0rem 0.7rem 1rem 2px rgb(167 175 250 / 34%);
         border-color: var(--white-color);
         border-style: solid;
         background-color: var(--white-alpha-color);
         border-radius: 15px;
     }
+    
+    .schedule-details label{
+        width: 100%; 
+    }
 
     .schedule-details input{
-        width: 150px;
+        width: 100%;
         font-size: 1.25rem;
         font-weight: 700;
         color: var(--second-color);
         border: 0;
         /* border-bottom: thin solid var(--third-color); */
         padding-left: 0;
-        margin-top: 0.5rem;
+        margin:0.5rem;
     }
+
+@media screen and (min-width: 1024px) {
+    
+        .schedule-details{
+            flex-direction: row;
+        }
+        form{
+            position: absolute;
+            bottom: -13rem;
+            margin: 10%;
+        }
+    
+       
+    } 
+
 
     select[name=vaccineType] {
         margin-top: 0.5rem;
@@ -303,11 +337,7 @@ header > .container{
         padding: 1%;
         width: 125px;
     }
-    form{
-        position: absolute;
-        bottom: 0;
-        margin-left: 10%;
-    }
+    
     
 
    
@@ -321,21 +351,32 @@ header > .container{
 
     
    
-    
-}
 
 
 
 
+    .section-1{
+        padding:1rem;
+        position: relative;
+        margin: 0 auto;
+         background-color: var(--white-color);        
+     }
 
+     .section-1 h1 {
+        font-size: 4vw;
+        font-weight: 800;
+        color: var(--second-color);
+        align-items: center;
+    }
 
 /*Image principal*/
 @media screen and (min-width:1024px){
     
 
     .section-1{
+       padding:0;
        position: relative;
-        top: 0;
+       margin: 0 auto;
         background-color: var(--white-color);        
     }
     .principal{
@@ -346,21 +387,17 @@ header > .container{
     }
     .principal-container{
         width: 50%;
-        margin: 9rem;
+        margin: 10%
     }
     .image-1{
         width: 50%;
     } 
-    
+
+   
 
 }
 
-.section-1 h1 {
-    font-size: 3.5vw;
-    font-weight: 800;
-    color: var(--second-color);
-    align-items: center;
-}
+
 
 
 
@@ -369,8 +406,9 @@ header > .container{
 .btn-vaccine{
     /* padding: 0.25rem 12px;  */
     padding: auto;
-    background-color: var(--first-color);
-    box-shadow: .25rem .24rem 1rem rgba(0, 0, 0, 0.25); 
+    /* background-color: var(--first-color); */
+
+    background: linear-gradient(90deg, rgba(56,88,214,1) 0%, rgba(37,69,195,1) 100%);    box-shadow: .25rem .24rem 1rem rgba(0, 0, 0, 0.25); 
     border-radius: 0.25rem;
     color: var(--white-color)!important; 
 }
@@ -408,7 +446,6 @@ header > .container{
 }
 .list-option p
 {
-    padding: 1rem;
     color: var(--third-color);
     font-size: 1rem; 
     font-weight: bold;
@@ -418,4 +455,26 @@ header > .container{
     align-items: center;
 }
 
+.vacunas{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 5rem;
+}
+.logo-images{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+    justify-content: space-around;
+}
+
+.logo-images img{
+    margin: 1rem;
+    width: 200px;
+    
+}
 
