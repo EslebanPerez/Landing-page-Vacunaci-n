@@ -46,7 +46,8 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+    font-weight: 800;
   color: var(--second-color);
 }
 
@@ -68,10 +69,10 @@ h6 {
   margin: 0;
   font-size: 0.7rem;
 }
-img {
-  max-width: 100%;
+/* img {
+  max-width: 50%;
   height: auto;
-}
+} */
 
 /*COMPONENTE*/
 /*UTILIIES*/
@@ -93,7 +94,11 @@ header {
   padding: 1rem;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--second-color);
+  
+  background-color: var(--white-alpha-color);
+    backdrop-filter: blur(5px);
+    border-bottom: solid;
+    border-color: white;
 }
 
 header > .container {
@@ -112,18 +117,13 @@ header > .container {
 
 /*MENU*/
 .menu-btn {
-  outline: thin solid var(--first-color);
+  /* outline: thin solid var(--first-color); */
   border: 0;
   cursor: pointer;
-  background-color: var(--second-color);
+  background-color: var(--white-alpha-color);
 }
 .menu-btn svg {
-  background: linear-gradient(
-    90deg,
-    rgba(56, 88, 214, 1) 0%,
-    rgba(37, 69, 195, 1) 100%
-  );
-  box-shadow: 0.25rem 0.24rem 1rem rgba(0, 0, 0, 0.25);
+  
 }
 .menu {
   position: fixed;
@@ -131,7 +131,9 @@ header > .container {
   top: var(--header-height);
   /* bottom: ; */
   width: 100%;
-  background-color: var(--second-color);
+  background-color: var(--white-alpha-color);
+ 
+
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -140,16 +142,19 @@ header > .container {
 }
 
 .menu a {
-  color: var(--first-alpha-color);
+  color: var(--second-color);
   font-size: 2rem;
   padding: 1rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  
+
 }
 .menu.is-active {
   opacity: 1;
   pointer-events: auto;
+  
 }
 
 .menu a:hover {
@@ -243,6 +248,10 @@ header > .container {
   /* box-shadow: .05rem .30rem 0.3rem rgba(250, 240, 167, 0.342);  */
   justify-content: center;
 }
+.contact-cards .btn-svg-blue {
+  height: 30px;
+  width: 30px;
+}
 .btn-shadow {
   box-shadow: 0.05rem 0.3rem 0.3rem #3959d749;
 }
@@ -303,8 +312,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   form {
     position: absolute;
-    bottom: -13rem;
-    margin: 10%;
+    margin-top: 30rem;
+    margin-left: 10%;
   }
 }
 
@@ -326,41 +335,120 @@ select[name="vaccineType"] {
   padding-left: 0.5rem;
 }
 
-.section-1 {
+.hero-image {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   position: relative;
   margin: 0 auto;
-  background-color: var(--white-color);
+  width: 100%;
+  height: auto;
+  
+  /* background-color: var(--white-color); */
+}
+.heroimage img{
+  width: 85%;
+  height: auto;
+  
+  padding-top: 6rem ;
+  padding: -1px;
 }
 
-.section-1 h1 {
-  font-size: 4vw;
+.hero-image h1 {
+  font-size: 3rem;
   font-weight: 800;
   color: var(--second-color);
   align-items: center;
 }
 
+
+.background-image{
+  background: linear-gradient(
+  90deg,
+  rgba(10, 151, 230, 1) 0%,
+  rgba(37, 69, 195, 1) 100%
+);
+}
+
 /*Image principal*/
-@media screen and (min-width: 1024px) {
-  .section-1 {
-    padding: 0;
-    position: relative;
-    margin: 0 auto;
-    background-color: var(--white-color);
+
+
+.information-2 .cuadro{
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-items: end;
+  margin-bottom: 0px;
+  padding-top: 10rem;
+}
+
+
+  .cuadro  img{
+    
+    height: auto;
+    
+    padding-top: 6rem ;
+    padding: -1px;
+    width: 300px;
   }
+  .heroimage img{
+    
+    padding-top: 6rem ;
+  }
+
   .principal {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* justify-content: center; */
+    
   }
   .principal-container {
-    width: 50%;
-    margin: 10%;
+   
+    /* max-width: 550px; */
+    padding: 3rem;
   }
-  .image-1 {
-    width: 50%;
+ 
+   
+  @media screen and (min-width: 1024px) {
+    .principal-container {
+      width: 50%;
+      /* max-width: 550px; */
+      padding: 10rem;
+    }
+      .cuadro  img{
+      
+        height: auto;
+        
+        padding-top: 6rem ;
+        padding: -1px;
+        width: 400px;
+      }
+  
+  
+    .hero-image {
+      flex-direction: row;
+      padding: 0;
+      position: relative;
+      margin: 0 auto;
+      background-color: var(--white-color);
+    }
+  
+    .heroimage{
+      
+      width: 50%;
+      height: auto;
+      
+      margin-bottom: -5px;
+    }
+    .cuadro{
+     
+      
+     
+    }
   }
-}
 
 .btn-vaccine {
   /* padding: 0.25rem 12px;  */
@@ -453,12 +541,19 @@ select[name="vaccineType"] {
   display: flex;
   flex-direction: column;
 }
+.cards,
+.contact :last-child{
+  padding-bottom: 7rem;
+}
+
+
 
 .information-1,
-.information-2,
-.contact {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.information-2 .cards-preparation,
+.contact,
+.contact-2 .contact-section {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 .information-1 h2 {
   font-size: 2.5rem;
@@ -479,6 +574,8 @@ select[name="vaccineType"] {
 }
 .cards .card {
   padding: 2rem;
+  
+  
 }
 
 .card:hover {
@@ -502,6 +599,7 @@ select[name="vaccineType"] {
     width: 350px;  
 } */
 
+
 @media screen and (min-width: 768px) {
   .contact-cards {
     display: grid;
@@ -509,6 +607,9 @@ select[name="vaccineType"] {
     justify-content: space-between;
     align-content: center;
   }
+
+
+
 }
 @media screen and (min-width: 1024px) {
   .contact {
@@ -527,9 +628,7 @@ select[name="vaccineType"] {
     /* grid-template-columns: repeat(4, 24%); */
   }
 
-  .cards {
-    /* flex-direction: row; */
-  }
+  
   .information-1 {
     margin-left: 150px;
     margin-right: 150px;
@@ -572,6 +671,7 @@ select[name="vaccineType"] {
   height: 200px;
   padding: 2rem;
   justify-items: center;
+  align-items: flex-start
 }
 
 .footer {
@@ -636,6 +736,8 @@ select[name="vaccineType"] {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-top: 3rem;
+  flex-direction: column-reverse
 }
 .sumarys {
   display: flex;
@@ -683,6 +785,8 @@ summary {
 }
 summary h3 {
   color: var(--second-color);
+  font-size: 1rem;
+  
 }
 
 summary:focus {
@@ -740,15 +844,30 @@ details[open] .control-icon-expand {
     .information-2 {
         
         flex-direction: row;
-        padding-top: 5rem;
-        padding-right: 10rem;
-    padding-left: 10rem;
+        
+        /* padding-top: 5rem;
+         padding-right: 10rem;
+    padding-left: 10rem; */
+  
     }
+    .information-2 .cuadro{
+     height: 400px;   
+     width: 50%;
+     
+     transform: translateY(250px);
+  }
     .info-preparation{
         width: 50%;
     }
     .cards-preparation{
         width: 50%;
+    }
+    .cards{
+      flex-direction: column;
+      /* padding-right: 10rem; */
+    }
+    .information-1 .cards{
+      flex-direction: row;
     }
 }
 
@@ -781,6 +900,33 @@ details[open] .control-icon-expand {
 }
 
 
+@media screen and (min-width: 1024px){
+  .contact-2{
+    display: flex;
+    flex-direction: row;
+  }
+.contact-section {
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .contact-2 .cuadro {
+    height: 500px;
+    width: 70%;
+    bottom: 0;
+    transform: translateY(250px);
+  }
+  .contact-2 .img-doctor{
+    width: 400px;
+    height: auto;
+    padding-top: 6rem;
+  
+    
+    transform: translateY(-280px);
+  }
+}
 
 /* 
 .image-col {
