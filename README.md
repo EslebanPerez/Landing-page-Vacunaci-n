@@ -19,3 +19,4 @@
 ###### Design by [Adhiari Subekti](https://dribbble.com/Adhiari_is)
 
 ## Plan de Marketing
+[Plan de Marketing](https://github.com/EslebanPerez/Vaccination/blob/main/Plan%20de%20marketing/Plan%20de%20marketing.pdf)
