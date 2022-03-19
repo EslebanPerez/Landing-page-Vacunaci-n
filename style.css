@@ -36,9 +36,7 @@ a {
   transition: all 0.5s ease-in-out;
   text-decoration: none;
 }
-/* a:hover{
-    opacity: 0.65;
-} */
+
 h1 {
   margin: 0;
   font-size: 2rem;
@@ -69,10 +67,6 @@ h6 {
   margin: 0;
   font-size: 0.7rem;
 }
-/* img {
-  max-width: 50%;
-  height: auto;
-} */
 
 /*COMPONENTE*/
 /*UTILIIES*/
@@ -255,6 +249,7 @@ header > .container {
 .btn-shadow {
   box-shadow: 0.05rem 0.3rem 0.3rem #3959d749;
 }
+
 .form-title {
   display: flex;
   font-size: 2rem;
@@ -264,6 +259,10 @@ header > .container {
 .form-title h3 {
   padding-left: 1rem;
 }
+.form-title .btn-svg-blue.btn-shadow {
+  width: 30px;
+  height: 30px;
+}
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -271,6 +270,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   opacity: 0;
 }
+
 .details {
   display: flex;
   flex-direction: row;
@@ -305,6 +305,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding-left: 0;
   margin: 0.5rem;
 }
+.details .btn-svg-blue {
+  width: 25px;
+  height: 25px;
+}
 
 @media screen and (min-width: 1024px) {
   .schedule-details {
@@ -325,7 +329,8 @@ select[name="vaccineType"] {
   font-weight: bold;
   color: #193c73;
   padding: 1%;
-  width: 125px;
+ 
+  width: 155px;
 }
 
 .title-icon {
@@ -347,7 +352,7 @@ select[name="vaccineType"] {
   /* background-color: var(--white-color); */
 }
 .heroimage img{
-  width: 85%;
+  width: 70%;
   height: auto;
   
   padding-top: 6rem ;
@@ -365,8 +370,8 @@ select[name="vaccineType"] {
 .background-image{
   background: linear-gradient(
   90deg,
-  rgba(10, 151, 230, 1) 0%,
-  rgba(37, 69, 195, 1) 100%
+  #0a97e6 0%,
+  #2545c3 100%
 );
 }
 
@@ -416,7 +421,7 @@ select[name="vaccineType"] {
     .principal-container {
       width: 50%;
       /* max-width: 550px; */
-      padding: 10rem;
+      padding: 10%;
     }
       .cuadro  img{
       
@@ -442,11 +447,6 @@ select[name="vaccineType"] {
       height: auto;
       
       margin-bottom: -5px;
-    }
-    .cuadro{
-     
-      
-     
     }
   }
 
@@ -499,6 +499,7 @@ select[name="vaccineType"] {
   color: var(--third-color);
   font-size: 1rem;
   font-weight: bold;
+  padding: 10px;
 }
 .list-option article {
   display: flex;
@@ -552,8 +553,9 @@ select[name="vaccineType"] {
 .information-2 .cards-preparation,
 .contact,
 .contact-2 .contact-section {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  
+  
+  padding: 2rem;
 }
 .information-1 h2 {
   font-size: 2.5rem;
@@ -564,7 +566,7 @@ select[name="vaccineType"] {
   flex-direction: column;
 
   width: -webkit-fill-available;
-  height: 300px;
+  height: auto;
   background-color: var(--white-color);
   border-style: solid;
   border-radius: 1rem;
@@ -635,7 +637,7 @@ select[name="vaccineType"] {
   }
 
   .section-cards {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -671,7 +673,7 @@ select[name="vaccineType"] {
   height: 200px;
   padding: 2rem;
   justify-items: center;
-  align-items: flex-start
+  
 }
 
 .footer {
@@ -904,10 +906,11 @@ details[open] .control-icon-expand {
   .contact-2{
     display: flex;
     flex-direction: row;
+    padding-bottom: 6rem;
   }
 .contact-section {
     margin-left: 150px;
-    margin-right: 150px;
+    /* margin-right: 150px; */
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
@@ -916,16 +919,22 @@ details[open] .control-icon-expand {
     height: 500px;
     width: 70%;
     bottom: 0;
-    transform: translateY(250px);
+    transform: translateY(160px);
   }
   .contact-2 .img-doctor{
     width: 400px;
     height: auto;
     padding-top: 6rem;
-  
-    
-    transform: translateY(-280px);
+    transform: translateY(-275px);
   }
+}
+.card-text{
+  display:flex;
+  flex-direction: row;
+}
+
+section#\#contacto {
+  padding-bottom: 6rem;
 }
 
 /* 
